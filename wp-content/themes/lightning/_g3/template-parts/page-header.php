@@ -39,8 +39,8 @@ print_r('<br>taxonomies<br>');
 print_r(array_values($taxonomies));
 
 
-print_r('<br>args<br>');
-print_r($arg);
+print_r('<br>get_object_taxonomies<br>');
+print_r(get_object_taxonomies( get_the_ID() ));
 
 print_r('<br>get_the_taxonomies<br>');
 print_r(get_the_taxonomies( get_the_ID(), $arg));
