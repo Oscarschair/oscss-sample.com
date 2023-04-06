@@ -39,9 +39,9 @@ $post_ID = get_the_ID();
 print_r('<br>POST ID:<br>');
 print_r($post_ID);
 
-print_r(get_object_taxonomies( $post_ID ));
+print_r(get_object_taxonomies( get_post($post_ID ) ));
 
-foreach ( get_object_taxonomies( $post_ID ) as $taxonomy ) {
+foreach ( get_object_taxonomies( get_post($post_ID )) as $taxonomy ) {
 	$t = (array) get_taxonomy( $taxonomy );
 
 	print_r(array_values($t));
