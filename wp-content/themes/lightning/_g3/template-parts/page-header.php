@@ -33,9 +33,14 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
-print_r('hi hre');
+print_r('POST<br>');
 print_r(get_posts());
+print_r('POST<br>');
+print_r(get_queried_object());
+print_r('POST<br>');
+print_r(get_queried_object_id());
 
+;
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
 		$search_text = sprintf( __( 'Search Results for : %s', 'lightning' ), get_search_query() );
