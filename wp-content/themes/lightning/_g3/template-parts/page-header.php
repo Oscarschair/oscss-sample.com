@@ -81,12 +81,7 @@ if ( is_search() ) {
 	$page_header_title = get_the_title();
 }
 
-print_R(array_values($breadcrumb_array));
-if ($cat->cat_name){
-	$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $cat->cat_name . '</' . $page_title_tag . '>';
-}else{
-	$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $page_header_title . '</' . $page_title_tag . '>';
-}
+$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $page_header_title . '_TEST1</' . $page_title_tag . '>';
 
 $allowed_html = array(
 	'h1'     => array(
