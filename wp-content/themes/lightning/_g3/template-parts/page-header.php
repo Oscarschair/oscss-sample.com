@@ -36,15 +36,14 @@ $page_header_title = '';
 /* testing */
 $post_ID = get_the_ID();
 
-print_r('<br>POST ID:<br>'.$post_ID);
-print_r(get_the_taxonomies($post_ID, $args)['category']);
-
 $post = get_post( $post_ID );
 $taxonomies = array();
-$terms = get_object_term_cache( $post_ID, get_object_taxonomies( $post ) );
-foreach ( $terms as $term ) {
-	print_r('<br>term->name:<br>');
-	print_r($term->name);
+foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
+	$terms = get_object_term_cache( $post_ID, $taxonomy );
+	foreach ( $terms as $term ) {
+		print_r('<br>term->name:<br>');
+		print_r($term->name);
+	}
 }
 
 /* testing */
