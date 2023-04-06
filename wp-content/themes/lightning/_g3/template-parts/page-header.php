@@ -39,25 +39,13 @@ $post_ID = get_the_ID();
 print_r('<br>POST ID:<br>');
 print_r($post_ID.'<br>');
 
+print_r($post_ID.'<br>');
+get_the_taxonomies($post_ID, $args);
+
 //print_r(get_object_taxonomies( get_post($post_ID ) ));
 
 foreach ( get_object_taxonomies( get_post($post_ID)) as $taxonomy ) {
 	$t = (array) get_taxonomy( $taxonomy );
-
-	//print_r(array_values($t));
-	// if ( empty( $t['label'] ) ) {
-	// 	$t['label'] = $taxonomy;
-	// }
-	// if ( empty( $t['args'] ) ) {
-	// 	$t['args'] = array();
-	// }
-	// if ( empty( $t['template'] ) ) {
-	// 	$t['template'] = $args['template'];
-	// }
-	// if ( empty( $t['term_template'] ) ) {
-	// 	$t['term_template'] = $args['term_template'];
-	// }
-
 	$terms = get_object_term_cache( $post->ID, $taxonomy );
 	if ( false === $terms ) {
 		$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
@@ -75,7 +63,7 @@ foreach ( get_object_taxonomies( get_post($post_ID)) as $taxonomy ) {
 	}
 	print_r('<br>links:<br>');
 	print_r(array_values($links).'<br>');
-	
+
 }
 /* testing */
 
