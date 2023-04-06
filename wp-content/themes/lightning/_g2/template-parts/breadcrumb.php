@@ -211,7 +211,7 @@ if ( ! function_exists( 'lightning_bread_crumb' ) ) {
 			}
 		} elseif ( is_home() && ! is_front_page() ) {
 			$breadcrumb_html .= '<li>';
-			$breadcrumb_html .= '<span>' . $post_top_name . '</span>';
+			$breadcrumb_html .= '<span>' . $post_top_name . '_TEST3</span>';
 			++$position;
 			$breadcrumb_html .= '<meta itemprop="position" content="' . $position . '" />';
 			$breadcrumb_html .= '</li>';
