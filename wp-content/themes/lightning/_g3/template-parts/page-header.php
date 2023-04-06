@@ -80,6 +80,8 @@ if ( is_search() ) {
 } elseif ( is_page() || is_attachment() ) {
 	$page_header_title = get_the_title();
 }
+
+print_R(array_values($breadcrumb_array));
 if ($cat->cat_name){
 	$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $cat->cat_name . '</' . $page_title_tag . '>';
 }else{
