@@ -36,35 +36,54 @@ $page_header_title = '';
 /* testing */
 $post_ID = get_the_ID();
 
-print_r('<br>POST ID:<br>');
-print_r($post_ID.'<br>');
-
-print_r($post_ID.'<br>');
+print_r('<br>POST ID:<br>'.$post_ID);
 print_r(get_the_taxonomies($post_ID, $args)['category']);
 
-//print_r(get_object_taxonomies( get_post($post_ID ) ));
+$post = get_post( $post_ID );
+$args = wp_parse_args(
+	$args,
+	array(
+		/* translators: %s: Taxonomy label, %l: List of terms formatted as per $term_template. */
+		'template'      => __( '%s: %l.' ),
+		'term_template' => '<a href="%1$s">%2$s</a>',
+	)
+);
 
-foreach ( get_object_taxonomies( get_post($post_ID)) as $taxonomy ) {
+$taxonomies = array();
+
+if ( ! $post ) {
+	return $taxonomies;
+}
+
+foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
 	$t = (array) get_taxonomy( $taxonomy );
+	if ( empty( $t['label'] ) ) {
+		$t['label'] = $taxonomy;
+	}
+	if ( empty( $t['args'] ) ) {
+		$t['args'] = array();
+	}
+	if ( empty( $t['template'] ) ) {
+		$t['template'] = $args['template'];
+	}
+	if ( empty( $t['term_template'] ) ) {
+		$t['term_template'] = $args['term_template'];
+	}
+
 	$terms = get_object_term_cache( $post->ID, $taxonomy );
 	if ( false === $terms ) {
 		$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
 	}
-	print_r('<br>terms:<br>');
-	print_r(array_values($terms).'<br>');
-
-
 	$links = array();
+
 	foreach ( $terms as $term ) {
 		$links[] = wp_sprintf( $t['term_template'], esc_attr( get_term_link( $term ) ), $term->name );
 	}
 	if ( $links ) {
 		$taxonomies[ $taxonomy ] = wp_sprintf( $t['template'], $t['label'], $links, $terms );
 	}
-	print_r('<br>links:<br>');
-	print_r(array_values($links).'<br>');
-
 }
+print_r($taxonomies);
 /* testing */
 
 
