@@ -33,23 +33,6 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
-/* testing */
-$post_ID = get_the_ID();
-
-$post = get_post( $post_ID );
-$taxonomies = array();
-foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
-	$terms = get_object_term_cache( $post_ID, $taxonomy );
-	foreach ( $terms as $term ) {
-		print_r('<br>term->name:<br>');
-		print_r($term->name);
-	}
-}
-print_r($terms[0]->name);
-
-/* testing */
-
-
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
 		$search_text = sprintf( __( 'Search Results for : %s', 'lightning' ), get_search_query() );
@@ -67,19 +50,28 @@ if ( is_search() ) {
 } elseif ( is_category() || is_tag() || is_tax() || is_home() || is_author() || is_archive() || is_single() ) {
 
 	
-	// $post_categories = wp_get_post_categories( $post_id );
-	// $cats = array();
-		
-	// foreach( $post_categories as $c ){
-	// 	$cat = get_category( $c );
-	// 	$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
-	// }
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
 
 		// Case of use post top page.
 		if ( $post_top_info['use'] ) {
-			$page_header_title = $post_top_info['name'];
+//			$page_header_title = $post_top_info['name'];
+
+/* Set all post's category as title */
+$post_ID = get_the_ID();
+
+$post = get_post( $post_ID );
+$taxonomies = array();
+foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
+	$terms = get_object_term_cache( $post_ID, $taxonomy );
+	foreach ( $terms as $term ) {
+		$page_header_title = $term->name;
+	}
+}
+
+
+
+
 			// Case of don't use post top page.
 		} else {
 
