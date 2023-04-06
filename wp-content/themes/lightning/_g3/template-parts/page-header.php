@@ -37,14 +37,14 @@ $page_header_title = '';
 $post_ID = get_the_ID();
 
 print_r('<br>POST ID:<br>');
-print_r($post_ID);
+print_r($post_ID.'<br>');
 
-print_r(get_object_taxonomies( get_post($post_ID ) ));
+//print_r(get_object_taxonomies( get_post($post_ID ) ));
 
-foreach ( get_object_taxonomies( get_post($post_ID )) as $taxonomy ) {
+foreach ( get_object_taxonomies( get_post($post_ID)) as $taxonomy ) {
 	$t = (array) get_taxonomy( $taxonomy );
 
-	print_r(array_values($t));
+	//print_r(array_values($t));
 	// if ( empty( $t['label'] ) ) {
 	// 	$t['label'] = $taxonomy;
 	// }
@@ -58,12 +58,12 @@ foreach ( get_object_taxonomies( get_post($post_ID )) as $taxonomy ) {
 	// 	$t['term_template'] = $args['term_template'];
 	// }
 
-	// $terms = get_object_term_cache( $post->ID, $taxonomy );
-	// if ( false === $terms ) {
-	// 	$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
-	// }
-	// $links = array();
-
+	$terms = get_object_term_cache( $post->ID, $taxonomy );
+	 if ( false === $terms ) {
+	 	$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
+	 }
+	 $links = array();
+	 print_r(array_values($links));
 	// foreach ( $terms as $term ) {
 	// 	$links[] = wp_sprintf( $t['term_template'], esc_attr( get_term_link( $term ) ), $term->name );
 	// }
