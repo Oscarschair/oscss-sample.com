@@ -34,12 +34,10 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
-/* i am here */
+/* testing */
 print_r('<br>taxonomies<br>');
-print_r(array_varibles($taxonomies));
+print_r(array_values($taxonomies));
 
-
-;
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
 		$search_text = sprintf( __( 'Search Results for : %s', 'lightning' ), get_search_query() );
