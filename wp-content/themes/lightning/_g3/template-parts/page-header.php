@@ -33,6 +33,8 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
+print_r('post_id='.$post_id);
+
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
 		$search_text = sprintf( __( 'Search Results for : %s', 'lightning' ), get_search_query() );
@@ -49,7 +51,7 @@ if ( is_search() ) {
 	$page_header_title = get_the_archive_title();
 } elseif ( is_category() || is_tag() || is_tax() || is_home() || is_author() || is_archive() || is_single() ) {
 
-	print_r($post_id);
+	
 	// $post_categories = wp_get_post_categories( $post_id );
 	// $cats = array();
 		
@@ -57,7 +59,6 @@ if ( is_search() ) {
 	// 	$cat = get_category( $c );
 	// 	$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
 	// }
-
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
 
