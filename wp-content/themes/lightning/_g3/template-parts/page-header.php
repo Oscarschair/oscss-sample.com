@@ -40,7 +40,7 @@ print_r('<br>POST ID:<br>');
 print_r($post_ID.'<br>');
 
 print_r($post_ID.'<br>');
-print_r(get_the_taxonomies($post_ID, $args));
+print_r(get_the_taxonomies($post_ID, $args)['category']);
 
 //print_r(get_object_taxonomies( get_post($post_ID ) ));
 
