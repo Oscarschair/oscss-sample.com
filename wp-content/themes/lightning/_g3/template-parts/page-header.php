@@ -51,13 +51,15 @@ if ( is_search() ) {
 
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
-		// Case of use post top page.
-print_r("I am here");
-print_r(array_values($post_type_info));
-print_r(array_values($post_top_info));
-		if ( $post_top_info['use'] ) {
-			$page_header_title = $post_type_info['name'];//$post_top_info['name'];
+		$cat = get_queried_object();
+		print_r("I am here");
+		print_r(array_values($post_type_info));
+		print_r(array_values($post_top_info));
+		print_r(array_values($cat));
 
+		// Case of use post top page.
+		if ( $post_top_info['use'] ) {
+			$page_header_title = $post_top_info['name'];
 			// Case of don't use post top page.
 		} else {
 
