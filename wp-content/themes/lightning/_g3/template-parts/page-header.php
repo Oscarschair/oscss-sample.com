@@ -39,12 +39,11 @@ $post_ID = get_the_ID();
 print_r('<br>POST ID:<br>');
 print_r($post_ID);
 
-
 print_r('<br>get_object_taxonomies<br>');
-print_r(array_values(get_object_taxonomies( get_the_ID() )));
+print_r(array_values(get_object_taxonomies( $post_ID)));
 
 print_r('<br>get_the_taxonomies<br>');
-print_r(get_the_taxonomies( get_the_ID(), $arg));
+print_r(get_the_taxonomies( $post_ID, $arg));
 
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
