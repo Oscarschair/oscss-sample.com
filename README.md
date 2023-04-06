@@ -1,6 +1,6 @@
 # oscss-sample.com
 
-Wordpressで作成したコーポレートサイトのサンプルである
+Wordpressで作成したコーポレートサイトのサンプルである(TEST)
 
 # "oscss-sample.com"の魅力
 
