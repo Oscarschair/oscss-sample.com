@@ -72,13 +72,15 @@ foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
 	}
 	$links = array();
 	foreach ( $terms as $term ) {
+		
+print_r('<br>term:'.$term.'<br>');
 		$links[] = wp_sprintf( $t['term_template'], esc_attr( get_term_link( $term ) ), $term->name );
 	}
 	if ( $links ) {
 		$taxonomies[ $taxonomy ] = wp_sprintf( $t['template'], $t['label'], $links, $terms );
 	}
 }
-print_r($taxonomies);
+print_r('<br>taxonomies:'.$taxonomies.'<br>');
 /* testing */
 
 
