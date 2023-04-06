@@ -55,26 +55,20 @@ if ( is_search() ) {
 
 		// Case of use post top page.
 		if ( $post_top_info['use'] ) {
-//			$page_header_title = $post_top_info['name'];
+			//$page_header_title = $post_top_info['name'];//一律「ブログ」表示
 
-/* Set all post's category as title */
-$post_ID = get_the_ID();
-
-$post = get_post( $post_ID );
-$taxonomies = array();
-foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
-	$terms = get_object_term_cache( $post_ID, $taxonomy );
-	foreach ( $terms as $term ) {
-		$page_header_title = $term->name;
-	}
-}
-
-
-
-
-			// Case of don't use post top page.
+			/* カテゴリ名を表示 */
+			$post_ID = get_the_ID();
+			$post = get_post( $post_ID );
+			$taxonomies = array();
+			foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
+				$terms = get_object_term_cache( $post_ID, $taxonomy );
+				foreach ( $terms as $term ) {
+					$page_header_title = $term->name;
+				}
+			}
+		// Case of don't use post top page.
 		} else {
-
 			if ( is_single() ) {
 
 				$taxonomies = get_the_taxonomies();
