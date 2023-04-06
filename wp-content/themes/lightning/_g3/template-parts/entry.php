@@ -82,7 +82,7 @@ if ( is_page() ) {
 
 					<?php
 					foreach ( $taxonomies as $key => $value ) {
-						$taxnomies_html .= '<div class="entry-meta-data-list">' . $value . '</div>';
+						$taxnomies_html .= '<div class="entry-meta-data-list">' . $value . '_TESTcat1</div>';
 					} // foreach
 
 					$taxnomies_html = apply_filters( 'lightning_taxnomiesHtml', $taxnomies_html ); // phpcs:ignore
