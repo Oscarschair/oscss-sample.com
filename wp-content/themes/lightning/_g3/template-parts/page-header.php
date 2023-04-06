@@ -59,17 +59,23 @@ foreach ( get_object_taxonomies( get_post($post_ID)) as $taxonomy ) {
 	// }
 
 	$terms = get_object_term_cache( $post->ID, $taxonomy );
-	 if ( false === $terms ) {
-	 	$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
-	 }
-	 $links = array();
-	 print_r(array_values($links));
-	// foreach ( $terms as $term ) {
-	// 	$links[] = wp_sprintf( $t['term_template'], esc_attr( get_term_link( $term ) ), $term->name );
-	// }
-	// if ( $links ) {
-	// 	$taxonomies[ $taxonomy ] = wp_sprintf( $t['template'], $t['label'], $links, $terms );
-	// }
+	if ( false === $terms ) {
+		$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
+	}
+	print_r('<br>terms:<br>');
+	print_r(array_values($terms).'<br>');
+
+
+	$links = array();
+	foreach ( $terms as $term ) {
+		$links[] = wp_sprintf( $t['term_template'], esc_attr( get_term_link( $term ) ), $term->name );
+	}
+	if ( $links ) {
+		$taxonomies[ $taxonomy ] = wp_sprintf( $t['template'], $t['label'], $links, $terms );
+	}
+	print_r('<br>links:<br>');
+	print_r(array_values($links).'<br>');
+	
 }
 /* testing */
 
