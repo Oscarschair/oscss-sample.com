@@ -55,7 +55,7 @@ if ( is_search() ) {
 		print_r("I am here");
 		print_r(array_values($post_type_info));
 		print_r(array_values($post_top_info));
-		print_r(array_values($cat));
+		print_r('cat='.array_values($cat));
 
 		// Case of use post top page.
 		if ( $post_top_info['use'] ) {
