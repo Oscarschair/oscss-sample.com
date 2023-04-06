@@ -36,7 +36,7 @@ class VkBreadcrumb {
 		$post           = $wp_query->get_queried_object();
 
 		// Home.
-		$front_page_name = 'HOME';
+		$front_page_name = 'HOME_TEST4';
 		$page_on_front   = get_option( 'page_on_front' );
 
 		if ( $page_on_front ) {
