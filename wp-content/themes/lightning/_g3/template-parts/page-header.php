@@ -49,6 +49,15 @@ if ( is_search() ) {
 	$page_header_title = get_the_archive_title();
 } elseif ( is_category() || is_tag() || is_tax() || is_home() || is_author() || is_archive() || is_single() ) {
 
+	print_r($post_id);
+	// $post_categories = wp_get_post_categories( $post_id );
+	// $cats = array();
+		
+	// foreach( $post_categories as $c ){
+	// 	$cat = get_category( $c );
+	// 	$cats[] = array( 'name' => $cat->name, 'slug' => $cat->slug );
+	// }
+
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
 
