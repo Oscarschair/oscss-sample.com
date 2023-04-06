@@ -10,7 +10,7 @@
  */
 $post_top_info  = VK_Helpers::get_post_top_info();
 $post_type_info = VK_Helpers::get_post_type_info();
-$taxonomies     = VK_Helpers::get_display_taxonomies( get_the_ID(), $args );
+$taxonomies     = VK_Helpers::get_the_taxonomies( get_the_ID(), $args );
 
 // Use post top page（ Archive title wrap to div ）.
 if ( $post_top_info['use'] ) {
