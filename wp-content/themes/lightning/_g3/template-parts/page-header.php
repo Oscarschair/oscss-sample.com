@@ -48,10 +48,23 @@ $args = wp_parse_args(
 		'term_template' => '<a href="%1$s">%2$s</a>',
 	)
 );
+
 $taxonomies = array();
 
 foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
 	$t = (array) get_taxonomy( $taxonomy );
+	if ( empty( $t['label'] ) ) {
+		$t['label'] = $taxonomy;
+	}
+	if ( empty( $t['args'] ) ) {
+		$t['args'] = array();
+	}
+	if ( empty( $t['template'] ) ) {
+		$t['template'] = $args['template'];
+	}
+	if ( empty( $t['term_template'] ) ) {
+		$t['term_template'] = $args['term_template'];
+	}
 
 	$terms = get_object_term_cache( $post->ID, $taxonomy );
 	if ( false === $terms ) {
