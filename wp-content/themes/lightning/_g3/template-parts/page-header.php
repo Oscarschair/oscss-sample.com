@@ -51,9 +51,6 @@ if ( is_search() ) {
 
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
-		$thisCat = get_category( get_query_var( 'cat' ), false );
-		print_r( $thisCat );
-		
 
 		// Case of use post top page.
 		if ( $post_top_info['use'] ) {
