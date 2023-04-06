@@ -33,7 +33,7 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
-print_r('this='.$this);
+print_r(get( 'category_name' ));
 
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
