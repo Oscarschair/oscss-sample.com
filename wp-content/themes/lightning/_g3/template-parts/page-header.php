@@ -33,12 +33,11 @@ if ( $post_top_info['use'] ) {
 
 $page_header_title = '';
 
-print_r('POST<br>');
-print_r(get_posts());
-print_r('POST<br>');
+
+print_r('<br>get_queried_object<br>');
 print_r(get_queried_object());
-print_r('POST<br>');
-print_r(get_queried_object_id());
+print_r('<br>category_name<br>');
+print_r(get( 'category_name' ));
 
 ;
 if ( is_search() ) {
