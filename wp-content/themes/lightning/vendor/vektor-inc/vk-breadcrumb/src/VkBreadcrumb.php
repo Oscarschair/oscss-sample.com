@@ -45,7 +45,7 @@ class VkBreadcrumb {
 
 		$breadcrumb_array = array(
 			array(
-				'name'  => $front_page_name.'_TEST4',
+				'name'  => $front_page_name,
 				'id'    => '',
 				'url'   => home_url(),
 				'class' => 'breadcrumb-list__item--home',
