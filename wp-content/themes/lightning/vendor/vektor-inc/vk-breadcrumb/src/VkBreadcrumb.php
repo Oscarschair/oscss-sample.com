@@ -151,7 +151,7 @@ class VkBreadcrumb {
 		} elseif ( ( is_single() || is_archive() ) || is_date() && ! is_post_type_archive() && ! is_search() ) {
 			if ( 'post' !== $post_type_info['slug'] || $post_top_info['use'] ) {
 				$breadcrumb_array[] = array(
-					'name'  => $post_type_info['name'].'_'.array_values($post_type_info),
+					'name'  => $post_type_info['name'].'_'.print_r(array_values($post_type_info)),
 					'id'    => '',
 					'url'   => $post_type_info['url'],
 					'class' => '',
