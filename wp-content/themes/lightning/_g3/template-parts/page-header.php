@@ -34,6 +34,7 @@ if ( $post_top_info['use'] ) {
 $page_header_title = '';
 
 print_r('hi hre');
+print_r(get_posts());
 
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
