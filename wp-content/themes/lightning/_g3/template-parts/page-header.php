@@ -45,6 +45,7 @@ foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
 		print_r($term->name);
 	}
 }
+print_r($terms[0]->name);
 
 /* testing */
 
