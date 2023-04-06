@@ -51,7 +51,7 @@ if ( is_search() ) {
 
 	// Case of post type == 'post'.
 	if ( 'post' === $post_type_info['slug'] ) {
-		$cat = get_queried_object();
+		$cat = $wp_query->get_queried_object();
 		print_r("I am here");
 		print_r(array_values($post_type_info));
 		print_r(array_values($post_top_info));
