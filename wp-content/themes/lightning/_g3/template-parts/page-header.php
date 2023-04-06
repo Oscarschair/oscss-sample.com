@@ -36,7 +36,7 @@ $page_header_title = '';
 
 /* i am here */
 print_r('<br>taxonomies<br>');
-print_r($taxonomies[0]);
+print_r(array_varibles($taxonomies));
 
 
 ;
