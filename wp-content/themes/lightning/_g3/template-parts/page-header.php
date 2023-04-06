@@ -53,7 +53,7 @@ if ( is_search() ) {
 	if ( 'post' === $post_type_info['slug'] ) {
 		// Case of use post top page.
 		if ( $post_top_info['use'] ) {
-			$page_header_title = $post_top_info['name'];
+			$page_header_title = $post_type_info['name'];//$post_top_info['name'];
 
 			// Case of don't use post top page.
 		} else {
@@ -81,7 +81,7 @@ if ( is_search() ) {
 	$page_header_title = get_the_title();
 }
 
-$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $page_header_title . '_TEST1</' . $page_title_tag . '>';
+$page_header_title_html = '<' . $page_title_tag . ' class="page-header-title">' . $page_header_title . '</' . $page_title_tag . '>';
 
 $allowed_html = array(
 	'h1'     => array(
