@@ -39,7 +39,7 @@ print_r('<br>taxonomies<br>');
 print_r(array_values($taxonomies));
 
 print_r('<br>get_the_taxonomies<br>');
-print_r(get_the_taxonomies( get_the_ID(), $args );
+print_r(get_the_taxonomies( get_the_ID(), $arg));
 
 if ( is_search() ) {
 	if ( ! empty( get_search_query() ) ) {
