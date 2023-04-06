@@ -123,7 +123,7 @@ class VkBreadcrumb {
 				foreach ( $ancestors as $ancestor ) {
 					if ( end( $ancestors ) !== $ancestor ) {
 						$breadcrumb_array[] = array(
-							'name'  => strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ),
+							'name'  => strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ).'_TEST5',
 							'id'    => '',
 							'url'   => get_permalink( $ancestor ),
 							'class' => '',
@@ -131,7 +131,7 @@ class VkBreadcrumb {
 						);
 					} else {
 						$breadcrumb_array[] = array(
-							'name'  => strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ),
+							'name'  => strip_tags( apply_filters( 'single_post_title', get_the_title( $ancestor ) ) ).'_TEST6',
 							'id'    => '',
 							'url'   => '',
 							'class' => '',
