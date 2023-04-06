@@ -40,27 +40,11 @@ print_r('<br>POST ID:<br>'.$post_ID);
 print_r(get_the_taxonomies($post_ID, $args)['category']);
 
 $post = get_post( $post_ID );
-$args = wp_parse_args(
-	$args,
-	array(
-		/* translators: %s: Taxonomy label, %l: List of terms formatted as per $term_template. */
-		'template'      => __( '%s: %l.' ),
-		'term_template' => '<a href="%1$s">%2$s</a>',
-	)
-);
-
 $taxonomies = array();
-
-foreach ( get_object_taxonomies( $post ) as $taxonomy ) {
-
-	$terms = get_object_term_cache( $post->ID, $taxonomy );
-	// if ( false === $terms ) {
-	// 	$terms = wp_get_object_terms( $post->ID, $taxonomy, $t['args'] );
-	// }
-	foreach ( $terms as $term ) {
-		print_r('<br>term->name:<br>');
-		print_r($term->name);
-	}
+$terms = get_object_term_cache( $post_ID, get_object_taxonomies( $post ) );
+foreach ( $terms as $term ) {
+	print_r('<br>term->name:<br>');
+	print_r($term->name);
 }
 
 /* testing */
