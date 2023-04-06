@@ -160,7 +160,7 @@ if ( ! function_exists( 'lightning_bread_crumb' ) ) {
 					foreach ( $ancestors as $ancestor ) {
 						$breadcrumb_html .= '<li' . $microdata_li . '>';
 						$breadcrumb_html .= '<a' . $microdata_li_a . ' href="' . get_permalink( $ancestor ) . '">';
-						$breadcrumb_html .= '<span' . $microdata_li_a_span . '>' . get_the_title( $ancestor ) . '</span>';
+						$breadcrumb_html .= '<span' . $microdata_li_a_span . '>' . get_the_title( $ancestor ) . 'test</span>';
 						$breadcrumb_html .= '</a>';
 						++$position;
 						$breadcrumb_html .= '<meta itemprop="position" content="' . $position . '" />';
