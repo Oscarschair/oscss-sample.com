@@ -34,9 +34,10 @@ if ( $post_top_info['use'] ) {
 $page_header_title = '';
 
 /* testing */
-$taxonomies     = VK_Helpers::get_display_taxonomies( get_the_ID(), $args );
-print_r('<br>taxonomies<br>');
-print_r(array_values($taxonomies));
+$post_ID = get_the_ID();
+
+print_r('<br>POST ID:<br>');
+print_r($post_ID);
 
 
 print_r('<br>get_object_taxonomies<br>');
