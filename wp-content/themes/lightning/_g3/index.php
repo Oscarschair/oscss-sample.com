@@ -102,6 +102,7 @@ if ( is_front_page() ) {
 	<?php do_action( 'lightning_site_body_append', 'lightning_site_body_append' ); ?>
 
 </div><!-- [ /.site-body ] -->
+<p>Hi there, i am here.</p>
 
 <?php if ( is_active_sidebar( 'footer-before-widget' ) ) : ?>
 <div class="site-body-bottom">
