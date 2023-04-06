@@ -30,34 +30,3 @@ CSS Simple Tree Shaking
 CSS Simple Tree Shaking is licensed under the terms of the GNU General Public License v2 license
 Source: https://celtislab.net/
 */
-.site-header{
-	background-color: var(--vk-color-custom-2);
-	color: #fff;	
-}
-
-.site-footer{
-	background-color: var(--vk-color-custom-1);
-	color: #fff;
-}
-.footer-social {
-	color: #fff;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-align: center;
-	align-items: center;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-}
-.footer-social .social-list {
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 72px;
-}
-.footer-social .social-list li {
-	width: 30px;
-}
