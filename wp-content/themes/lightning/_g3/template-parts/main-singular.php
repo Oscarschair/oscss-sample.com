@@ -11,7 +11,6 @@ else :
 	if ( have_posts() ) :
 		while ( have_posts() ) :
 			the_post();
-print_r(the_post());
 
 			$template = 'template-parts/entry-' . esc_attr( $post->post_name ) . '.php';
 			$return   = locate_template( $template );
