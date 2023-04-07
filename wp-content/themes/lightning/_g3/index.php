@@ -20,16 +20,15 @@ do_action( 'lightning_site_header_after', 'lightning_site_header_after' );
 <?php
 if ( is_front_page() ) {
 	if ( apply_filters( 'lightning_default_slide_display', true ) ) {
-//		LTG_G3_Slider::display_html();
+		LTG_G3_Slider::display_html(); //sliderの部分
 	}
 }
 ?>
 <?php if ( ! is_front_page() ) : ?>
-
 	<?php
 	do_action( 'lightning_page_header_before', 'lightning_page_header_before' );
 	if ( apply_filters( 'lightning_is_page_header', true, 'page_header' ) ) {
-		lightning_get_template_part( 'template-parts/page-header' );
+//		lightning_get_template_part( 'template-parts/page-header' );
 	}
 	do_action( 'lightning_page_header_after', 'lightning_page_header_after' );
 	?>
