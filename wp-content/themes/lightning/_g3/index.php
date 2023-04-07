@@ -67,7 +67,7 @@ if ( is_front_page() ) {
 					lightning_get_template_part( 'template-parts/main-woocommerce' );//ECサイトの場合に使う部分
 				} else {
 					if ( apply_filters( 'lightning_is_singular', is_singular() ) ) {
-//						lightning_get_template_part( 'template-parts/main-singular' );
+						lightning_get_template_part( 'template-parts/main-singular' );//TOPページで、SLIDERより下の内容
 					} else {
 						if ( is_404() ) {
 							lightning_get_template_part( 'template-parts/main-404' );
