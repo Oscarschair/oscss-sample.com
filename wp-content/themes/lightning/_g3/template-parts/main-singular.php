@@ -20,7 +20,7 @@ else :
 			}
 
 			do_action( 'lightning_comment_before' );//必要な場合actionを追加するが、現在はない
-			comments_template( 'tRY somthing', true );
+			//comments_template( '', true );
 			do_action( 'lightning_comment_after' );//必要な場合actionを追加するが、現在はない
 
 			if ( apply_filters( 'lightning_is_next_prev', is_single(), 'next_prev' ) ) {
