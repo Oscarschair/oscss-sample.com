@@ -16,7 +16,7 @@ else :
 			if ( $return && get_post_type() !== $post->post_name ) {
 				locate_template( $template, true );
 			} else {
-				lightning_get_template_part( 'template-parts/entry', get_post_type() );
+//				lightning_get_template_part( 'template-parts/entry', get_post_type() );
 			}
 
 			do_action( 'lightning_comment_before' );//必要な場合actionを追加するが、現在はない
