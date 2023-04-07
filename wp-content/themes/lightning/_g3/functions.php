@@ -352,3 +352,12 @@ add_filter(
 		return $editor_settings;
 	}
 );
+
+
+/* INDEXのaction管理 */
+
+function top_page_action_header_before() {
+	$text         = '<p>try to add something</p>';
+	echo ( $text );
+}
+add_action( 'lightning_site_header_before', 'top_page_action_header_before' );
