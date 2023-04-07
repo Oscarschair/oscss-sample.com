@@ -28,7 +28,7 @@ if ( is_front_page() ) {
 	<?php
 	do_action( 'lightning_page_header_before', 'lightning_page_header_before' );
 	if ( apply_filters( 'lightning_is_page_header', true, 'page_header' ) ) {
-		lightning_get_template_part( 'template-parts/page-header' );//TOPページ以外のページタイトル
+		lightning_get_template_part( 'template-parts/page-header' );//TOPページ以外のページタイトル(h1タグ)
 	}
 	do_action( 'lightning_page_header_after', 'lightning_page_header_after' );
 	?>
@@ -45,7 +45,7 @@ if ( is_front_page() ) {
 				'class_list'      => 'breadcrumb-list',
 				'class_list_item' => 'breadcrumb-list__item',
 			);
-			$vk_breadcrumb->the_breadcrumb( $breadcrumb_options );
+			//$vk_breadcrumb->the_breadcrumb( $breadcrumb_options );
 		}
 	}
 	do_action( 'lightning_breadcrumb_after', 'lightning_breadcrumb_after' );
