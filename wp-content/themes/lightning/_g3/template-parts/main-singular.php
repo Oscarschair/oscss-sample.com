@@ -6,7 +6,7 @@
  */
 
 if ( apply_filters( 'lightning_is_extend_single', false ) ) :
-	do_action( 'lightning_extend_single' );
+	do_action( 'lightning_extend_single' );//必要な場合actionを追加するが、現在はない
 else :
 	if ( have_posts() ) :
 		while ( have_posts() ) :
@@ -19,9 +19,9 @@ else :
 				lightning_get_template_part( 'template-parts/entry', get_post_type() );
 			}
 
-			do_action( 'lightning_comment_before' );
-			comments_template( '', true );
-			do_action( 'lightning_comment_after' );
+			do_action( 'lightning_comment_before' );//必要な場合actionを追加するが、現在はない
+			comments_template( 'tRY somthing', true );
+			do_action( 'lightning_comment_after' );//必要な場合actionを追加するが、現在はない
 
 			if ( apply_filters( 'lightning_is_next_prev', is_single(), 'next_prev' ) ) {
 				lightning_get_template_part( 'template-parts/next-prev', get_post_type() );

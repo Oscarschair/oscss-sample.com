@@ -86,7 +86,7 @@ if ( is_front_page() ) {
 		do_action( 'lightning_sub_section_before', 'lightning_sub_section_before' );
 		if ( lightning_is_subsection() ) {
 			if ( lightning_is_woo_page() ) {
-				do_action( 'woocommerce_sidebar' );
+				do_action( 'woocommerce_sidebar' );//ECサイトの場合のsidebar
 			} else {
 				//lightning_get_template_part( 'sidebar', get_post_type() );//sidebar今は基本使っていない
 			}
