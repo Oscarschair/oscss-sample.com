@@ -64,10 +64,10 @@ if ( is_front_page() ) {
 			<?php
 			if ( apply_filters( 'lightning_is_main_section_template', true, 'main_section_template' ) ) {
 				if ( lightning_is_woo_page() ) {
-					lightning_get_template_part( 'template-parts/main-woocommerce' );
+					lightning_get_template_part( 'template-parts/main-woocommerce' );//ECサイトの場合に使う部分
 				} else {
 					if ( apply_filters( 'lightning_is_singular', is_singular() ) ) {
-						lightning_get_template_part( 'template-parts/main-singular' );
+//						lightning_get_template_part( 'template-parts/main-singular' );
 					} else {
 						if ( is_404() ) {
 							lightning_get_template_part( 'template-parts/main-404' );
@@ -88,7 +88,7 @@ if ( is_front_page() ) {
 			if ( lightning_is_woo_page() ) {
 				do_action( 'woocommerce_sidebar' );
 			} else {
-				lightning_get_template_part( 'sidebar', get_post_type() );
+				lightning_get_template_part( 'sidebar', get_post_type() );//sidebar今は基本使っていない
 			}
 		}
 		do_action( 'lightning_sub_section_after', 'lightning_sub_section_after' );
