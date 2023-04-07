@@ -11,12 +11,14 @@ else :
 	if ( have_posts() ) :
 		while ( have_posts() ) :
 			the_post();
+print_r(the_post());
+
 			$template = 'template-parts/entry-' . esc_attr( $post->post_name ) . '.php';
 			$return   = locate_template( $template );
 			if ( $return && get_post_type() !== $post->post_name ) {
 				locate_template( $template, true );
 			} else {
-//				lightning_get_template_part( 'template-parts/entry', get_post_type() );
+				lightning_get_template_part( 'template-parts/entry', get_post_type() );
 			}
 
 			do_action( 'lightning_comment_before' );//必要な場合actionを追加するが、現在はない
