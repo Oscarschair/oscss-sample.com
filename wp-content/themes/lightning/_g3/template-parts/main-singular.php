@@ -20,7 +20,7 @@ else :
 			}
 
 			do_action( 'lightning_comment_before' );//必要な場合actionを追加するが、現在はない
-			//comments_template( '', true );
+			//comments_template( '', true );//コーポレートサイトは特に必要もないので、コメント機能を無効化しています。
 			do_action( 'lightning_comment_after' );//必要な場合actionを追加するが、現在はない
 
 			if ( apply_filters( 'lightning_is_next_prev', is_single(), 'next_prev' ) ) {
