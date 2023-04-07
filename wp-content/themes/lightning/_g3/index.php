@@ -88,7 +88,7 @@ if ( is_front_page() ) {
 			if ( lightning_is_woo_page() ) {
 				do_action( 'woocommerce_sidebar' );
 			} else {
-				lightning_get_template_part( 'sidebar', get_post_type() );//sidebar今は基本使っていない
+				//lightning_get_template_part( 'sidebar', get_post_type() );//sidebar今は基本使っていない
 			}
 		}
 		do_action( 'lightning_sub_section_after', 'lightning_sub_section_after' );
