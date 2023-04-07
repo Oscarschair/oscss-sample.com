@@ -58,6 +58,9 @@ if ( is_search() ) {
 			//$page_header_title = $post_top_info['name'];//一律「ブログ」表示
 
 			/* カテゴリ名を表示 */
+
+print_r(the_category(', '));
+			
 			$post_ID = get_the_ID();
 			$post = get_post( $post_ID );
 			$taxonomies = array();
