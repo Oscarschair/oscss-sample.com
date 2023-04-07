@@ -86,15 +86,15 @@ if ( is_front_page() ) {
 		</div><!-- [ /.main-section ] -->
 
 		<?php
-		do_action( 'lightning_sub_section_before', 'lightning_sub_section_before' );
-		if ( lightning_is_subsection() ) {
-			if ( lightning_is_woo_page() ) {
-				do_action( 'woocommerce_sidebar' );
-			} else {
-				lightning_get_template_part( 'sidebar', get_post_type() );
-			}
-		}
-		do_action( 'lightning_sub_section_after', 'lightning_sub_section_after' );
+		//do_action( 'lightning_sub_section_before', 'lightning_sub_section_before' );
+		// if ( lightning_is_subsection() ) {
+		// 	if ( lightning_is_woo_page() ) {
+		// 		do_action( 'woocommerce_sidebar' );
+		// 	} else {
+		// 		lightning_get_template_part( 'sidebar', get_post_type() );
+		// 	}
+		// }
+		// do_action( 'lightning_sub_section_after', 'lightning_sub_section_after' );
 		?>
 
 	</div><!-- [ /.site-body-container ] -->
