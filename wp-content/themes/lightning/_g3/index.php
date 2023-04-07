@@ -20,11 +20,10 @@ do_action( 'lightning_site_header_after', 'lightning_site_header_after' );
 <?php
 if ( is_front_page() ) {
 	if ( apply_filters( 'lightning_default_slide_display', true ) ) {
-		LTG_G3_Slider::display_html();
+//		LTG_G3_Slider::display_html();
 	}
 }
 ?>
-<p>Hi there, i am here1.</p>
 <?php if ( ! is_front_page() ) : ?>
 
 	<?php
@@ -56,7 +55,6 @@ if ( is_front_page() ) {
 <?php endif; ?>
 
 <?php do_action( 'lightning_site_body_before', 'lightning_site_body_before' ); ?>
-<p>Hi there, i am here2.</p>
 <div class="<?php lightning_the_class_name( 'site-body' ); ?>">
 	<?php do_action( 'lightning_site_body_prepend', 'lightning_site_body_prepend' ); ?>
 	<div class="<?php lightning_the_class_name( 'site-body-container' ); ?> container">
@@ -102,7 +100,6 @@ if ( is_front_page() ) {
 	<?php do_action( 'lightning_site_body_append', 'lightning_site_body_append' ); ?>
 
 </div><!-- [ /.site-body ] -->
-<p>Hi there, i am here3.</p>
 
 <?php if ( is_active_sidebar( 'footer-before-widget' ) ) : ?>
 <div class="site-body-bottom">
