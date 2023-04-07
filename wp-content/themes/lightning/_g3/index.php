@@ -45,7 +45,7 @@ if ( is_front_page() ) {
 				'class_list'      => 'breadcrumb-list',
 				'class_list_item' => 'breadcrumb-list__item',
 			);
-			//$vk_breadcrumb->the_breadcrumb( $breadcrumb_options );
+			$vk_breadcrumb->the_breadcrumb( $breadcrumb_options );//TOPページ以外のパンくず
 		}
 	}
 	do_action( 'lightning_breadcrumb_after', 'lightning_breadcrumb_after' );
