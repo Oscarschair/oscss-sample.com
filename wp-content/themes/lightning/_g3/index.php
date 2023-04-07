@@ -28,7 +28,7 @@ if ( is_front_page() ) {
 	<?php
 	do_action( 'lightning_page_header_before', 'lightning_page_header_before' );
 	if ( apply_filters( 'lightning_is_page_header', true, 'page_header' ) ) {
-//		lightning_get_template_part( 'template-parts/page-header' );
+		lightning_get_template_part( 'template-parts/page-header' );//TOPページ以外のページタイトル
 	}
 	do_action( 'lightning_page_header_after', 'lightning_page_header_after' );
 	?>
