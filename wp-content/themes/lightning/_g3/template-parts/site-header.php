@@ -1,5 +1,10 @@
 <header id="site-header" class="<?php lightning_the_class_name( 'site-header' ); ?>">
 	<?php do_action( 'lightning_site_header_prepend' ); ?>
+
+	<div class="pre-header">
+		<p>このサイトは<a href="https://oscarchair.jp">https://oscarchair.jp</a>より構築されたサンプルサイトです。</p>
+	</div>
+
 	<div id="site-header-container" class="<?php lightning_the_class_name( 'site-header-container' ); ?> container">
 
 		<?php
