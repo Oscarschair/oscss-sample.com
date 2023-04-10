@@ -352,3 +352,10 @@ add_filter(
 		return $editor_settings;
 	}
 );
+
+/*サイト帯を入れる*/
+function add_top_banner() {
+	$text = '<p>このサイトは<a href="https://oscarchair.jp">https://oscarchair.jp</a>より構築されたサンプルサイトです。</p>';
+	echo( $text );
+}
+add_action( 'lightning_site_header_prepend', 'add_top_banner' );
