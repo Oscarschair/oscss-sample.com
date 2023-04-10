@@ -15,6 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/**
+ * 必要な定数を定義しておく
+ */
+define( 'PLUGIN_VERSION', '1.0' );
+define( 'MY_CUSTOM_PLUGIN', __FILE__ );
+define( 'MY_CUSTOM_PLUGIN_DIR', untrailingslashit( dirname( MY_CUSTOM_PLUGIN ) ) );
+
+//define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+//define( 'PLUGIN_URL', plugins_url( '/', __FILE__ ) );
+
 function add_custom_menu_page()
 {
     add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta_by_url_setting', 'dashicons-admin-generic', 60);   
@@ -22,16 +32,45 @@ function add_custom_menu_page()
 add_action('admin_menu', 'add_custom_menu_page');
 
 function meta_by_url_setting(){
-    get_template_part( 'template-parts/breadcrumb' );
+//    get_template_part( 'template-parts/breadcrumb' );
 }
 
+class Meta_By_Url {
+    function __construct() {
+        // フック
+        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
+    }
 
-/**
- * 必要な定数を定義しておく
- */
-define( 'PLUGIN_VERSION', '1.0' );
-define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PLUGIN_URL', plugins_url( '/', __FILE__ ) );
+    // テンプレートの置き換え
+    function template_replacement( $template_path ) {
+        // worksアーカイブの場合
+        // if( is_post_type_archive( 'works' ) ) {
+            $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
+            $template_path = $theme_file;
+        // }
+
+        // works詳細の場合
+        // if ( is_singular( 'works' ) ) {
+        //     $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/single.php';
+
+        //     $template_path = $theme_file;
+        // }
+
+        return $template_path;
+    }
+}
+
+new Meta_By_Url();
+
+
+
+//ここまで
+
+
+
+
+
+
 
 /**
  * スクリプト スタイルシートの読み込み
