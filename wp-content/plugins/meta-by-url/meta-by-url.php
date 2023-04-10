@@ -22,7 +22,7 @@ function add_custom_menu_page()
 add_action('admin_menu', 'add_custom_menu_page');
 
 function meta_by_url_setting(){
-    echo('test');
+    get_template_part( 'template-parts/breadcrumb' );
 }
 
 
