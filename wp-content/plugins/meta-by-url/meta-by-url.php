@@ -77,7 +77,7 @@ class Meta_By_Url {
 		$i=0;
 	
 		foreach($pages as $page){ // $pages is array of object
-			echo $i."<br>";
+			echo "ID:".$page->ID."URL:".$page->guid."post_title:".$page->post_title."post_type:".$page->post_type."<br>";
 			$i++;
 		//    $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
 		//    echo $page_template;
