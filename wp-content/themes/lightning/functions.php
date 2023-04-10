@@ -215,3 +215,21 @@ function lightning_change_generation( $old_value, $value, $option ) {
 	}
 }
 add_action( 'update_option_lightning_theme_generation', 'lightning_change_generation', 10, 3 );
+
+/**
+ * GTM HEADタグ
+ */
+function add_gtm_head_tag()
+{
+    get_template_part( 'template-parts/gtm-head' );
+}
+add_action('wp_head', 'add_gtm_head_tag');
+
+/**
+ * GTM BODYタグ
+ */
+function add_gtm_body_tag()
+{
+    get_template_part( 'template-parts/gtm-body' );
+}
+add_action('wp_body_open', 'add_gtm_body_tag');
