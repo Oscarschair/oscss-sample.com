@@ -32,15 +32,15 @@ function add_custom_menu_page()
 add_action('admin_menu', 'add_custom_menu_page');
 
 function meta_by_url_setting(){
-	echo('hi1');
 	new Meta_By_Url();
 }
 
 class Meta_By_Url {
     function __construct() {
         // フック
-		echo('hi2');
 		echo($this->template_replacement());
+		include $this->template_replacement();
+
 		// template_replacement('');
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		echo('hi4');
