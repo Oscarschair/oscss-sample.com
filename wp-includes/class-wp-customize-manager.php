@@ -5113,13 +5113,13 @@ final class WP_Customize_Manager {
 			)
 		);
 
-		// $this->add_control(
-		// 	'blogname',
-		// 	array(
-		// 		'label'   => __( 'Site Title' ),
-		// 		'section' => 'title_tagline',
-		// 	)
-		// );
+		$this->add_control(
+			'blogname',
+			array(
+				'label'   => __( 'Site Title' ),
+				'section' => 'title_tagline',
+			)
+		);
 
 		$this->add_setting(
 			'blogdescription',
