@@ -37,7 +37,7 @@ function meta_by_url_portal(){
 
 class Meta_By_Url {
     function __construct() {
-		global $wpdb;
+		//global $wpdb;
 
 		$args = array(
 			'sort_order' => 'asc',
