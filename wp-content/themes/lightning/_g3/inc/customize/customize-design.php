@@ -24,7 +24,7 @@ function lightning_customize_register_design( $wp_customize ) {
 			$wp_customize,
 			'logo_header',
 			array(
-				'label'            => __( 'Header logo image', 'lightning' ).'test, ia am here',
+				'label'            => __( 'Header logo image', 'lightning' ),
 				'section'          => 'lightning_design',
 				'type'             => 'text',
 				'custom_title_sub' => '',
