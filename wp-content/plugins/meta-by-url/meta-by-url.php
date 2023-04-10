@@ -32,6 +32,7 @@ function add_custom_menu_page()
 add_action('admin_menu', 'add_custom_menu_page');
 
 function meta_by_url_setting(){
+	new Meta_By_Url();
 //    get_template_part( 'template-parts/breadcrumb' );
 }
 
@@ -60,7 +61,7 @@ class Meta_By_Url {
     }
 }
 
-new Meta_By_Url();
+
 
 
 
