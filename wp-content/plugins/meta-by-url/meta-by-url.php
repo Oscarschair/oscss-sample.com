@@ -40,7 +40,7 @@ class Meta_By_Url {
     function __construct() {
         // フック
 		echo('hi2');
-		$this->template_replacement();
+		echo($this->template_replacement());
 		// template_replacement('');
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		echo('hi4');
