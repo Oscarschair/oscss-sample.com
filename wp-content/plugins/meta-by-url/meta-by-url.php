@@ -37,6 +37,24 @@ function meta_by_url_portal(){
 
 class Meta_By_Url {
     function __construct() {
+
+
+        // フック
+//        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
+		include $this->template_replacement();
+    }
+
+    // テンプレートの置き換え
+    function template_replacement( $template_path = '' ) {
+        // 管理画面の場合
+        if( is_admin() ) {
+            $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
+            $template_path = $theme_file;
+        }
+        return $template_path;
+    }
+
+	function portal_get_pages() {// $pages, $pagenum = 1, $per_page = 20
 		$args = array(
 			'sort_order' => 'ASC',
 			'sort_column' => 'post_title',
@@ -64,35 +82,7 @@ class Meta_By_Url {
 		//    $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
 		//    echo $page_template;
 		}
-
-        // フック
-//        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
-		include $this->template_replacement();
-    }
-
-    // テンプレートの置き換え
-    function template_replacement( $template_path = '' ) {
-        // 管理画面の場合
-        if( is_admin() ) {
-            $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
-            $template_path = $theme_file;
-        }
-        return $template_path;
-    }
-
-	// function _display_rows_hierarchical( $pages, $pagenum = 1, $per_page = 20 ) {
-	// 	global $wpdb;
-
-	// 	$level = 0;
-
-	// 	if ( ! $pages ) {
-	// 		$pages = get_pages( array( 'sort_column' => 'menu_order' ) );
-
-	// 		if ( ! $pages ) {
-	// 			return;
-	// 		}
-	// 	}
-	// }
+	}
 
 }
 
