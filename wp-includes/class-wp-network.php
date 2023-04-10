@@ -134,7 +134,7 @@ class WP_Network {
 			$this->$key = $value;
 		}
 
-		$this->_set_site_name().'test1';
+		$this->_set_site_name();
 		$this->_set_cookie_domain();
 	}
 
