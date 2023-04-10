@@ -764,7 +764,7 @@ if ( ! class_exists( 'LTG_G3_Slider' ) ) {
 
 						$mini_content_args = array(
 							'outer_class'    => 'mini-content-container-' . $i . ' container',
-							'title_tag'      => 'h3',
+							'title_tag'      => 'h2',
 							'title_class'    => 'ltg-slide-text-title',
 							'caption_tag'    => 'div',
 							'caption_class'  => 'ltg-slide-text-caption',
