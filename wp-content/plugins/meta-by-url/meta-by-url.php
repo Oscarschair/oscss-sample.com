@@ -56,7 +56,7 @@ class Meta_By_Url {
 
 	function portal_get_pages($post_type = 'page') {// $pages, $pagenum = 1, $per_page = 20
 
-		echo "i am here";
+		echo "post_type: ".$post_type."<br>";
 		$args = array(
 			'sort_order' => 'ASC',
 			'sort_column' => 'post_title',
