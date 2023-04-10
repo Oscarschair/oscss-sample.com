@@ -5104,22 +5104,22 @@ final class WP_Customize_Manager {
 			)
 		);
 
-		// $this->add_setting(
-		// 	'blogname',
-		// 	array(
-		// 		'default'    => get_option( 'blogname' ),
-		// 		'type'       => 'option',
-		// 		'capability' => 'manage_options',
-		// 	)
-		// );
-
-		$this->add_control(
+		$this->add_setting(
 			'blogname',
 			array(
-				'label'   => __( 'Site Title' ),
-				'section' => 'title_tagline',
+				'default'    => get_option( 'blogname' ),
+				'type'       => 'option',
+				'capability' => 'manage_options',
 			)
 		);
+
+		// $this->add_control(
+		// 	'blogname',
+		// 	array(
+		// 		'label'   => __( 'Site Title' ),
+		// 		'section' => 'title_tagline',
+		// 	)
+		// );
 
 		$this->add_setting(
 			'blogdescription',
