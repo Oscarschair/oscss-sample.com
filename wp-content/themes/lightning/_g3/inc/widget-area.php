@@ -109,7 +109,7 @@ if ( ! function_exists( 'lightning_widgets_init' ) ) {
 					'id'            => 'footer-widget-' . $i,
 					'before_widget' => '<aside class="widget %2$s" id="%1$s">',
 					'after_widget'  => '</aside>',
-					'before_title'  => '<h4 class="widget-title site-footer-title">',
+					'before_title'  => '<h3 class="widget-title site-footer-title">',
 					'after_title'   => '</h4>',
 				)
 			);
