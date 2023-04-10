@@ -34,14 +34,14 @@ add_action('admin_menu', 'add_custom_menu_page');
 function meta_by_url_setting(){
 	echo('hi1');
 	new Meta_By_Url();
-//    get_template_part( 'template-parts/breadcrumb' );
 }
 
 class Meta_By_Url {
     function __construct() {
         // フック
 		echo('hi2');
-//		template_replacement('');
+		$this->template_replacement();
+		// template_replacement('');
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		echo('hi4');
     }
