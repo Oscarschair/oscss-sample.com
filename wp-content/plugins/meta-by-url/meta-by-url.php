@@ -21,6 +21,10 @@ function add_custom_menu_page()
 }
 add_action('admin_menu', 'add_custom_menu_page');
 
+function meta_by_url_setting(){
+    echo('test');
+}
+
 
 /**
  * 必要な定数を定義しておく
@@ -36,7 +40,6 @@ function add_plugin_js_css()
 {
 	/* JS */
 //	wp_enqueue_script('my-test-script', PLUGIN_URL.'assets/main.js', array(), PLUGIN_VERSION, true );
-
 	/* CSS */
 //	wp_enqueue_style( 'my-test-style', PLUGIN_URL.'assets/style.css', array(), PLUGIN_VERSION );
 }
