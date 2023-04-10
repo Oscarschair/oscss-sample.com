@@ -5104,14 +5104,14 @@ final class WP_Customize_Manager {
 			)
 		);
 
-		$this->add_setting(
-			'blogname',
-			array(
-				'default'    => get_option( 'blogname' ),
-				'type'       => 'option',
-				'capability' => 'manage_options',
-			)
-		);
+		// $this->add_setting(
+		// 	'blogname',
+		// 	array(
+		// 		'default'    => get_option( 'blogname' ),
+		// 		'type'       => 'option',
+		// 		'capability' => 'manage_options',
+		// 	)
+		// );
 
 		$this->add_control(
 			'blogname',
