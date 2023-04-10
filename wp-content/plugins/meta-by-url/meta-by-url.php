@@ -71,7 +71,7 @@ class Meta_By_Url {
 			'exclude_tree' => '',
 			'number' => '',
 			'offset' => 0,
-			'post_type' => 'post',//page|post
+			'post_type' => $post_type,//page|post
 			'post_status' => 'publish'
 		); 
 		$pages = get_pages( $args );  // get all pages based on supplied args
