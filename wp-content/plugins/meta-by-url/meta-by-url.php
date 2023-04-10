@@ -27,41 +27,34 @@ define( 'MY_CUSTOM_PLUGIN_DIR', untrailingslashit( dirname( MY_CUSTOM_PLUGIN ) )
 
 function add_custom_menu_page()
 {
-    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta_by_url_setting', 'dashicons-admin-generic', 60);   
+    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta_by_url_portal', 'dashicons-admin-generic', 60);   
 }
 add_action('admin_menu', 'add_custom_menu_page');
 
-function meta_by_url_setting(){
+function meta_by_url_portal(){
 	new Meta_By_Url();
 }
 
 class Meta_By_Url {
     function __construct() {
         // フック
-		echo($this->template_replacement());
-		include $this->template_replacement();
-
-		// template_replacement('');
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
-		echo('hi4');
+		include $this->template_replacement();
     }
 
     // テンプレートの置き換え
     function template_replacement( $template_path = '' ) {
-		echo('hi3');
-        // worksアーカイブの場合
-        // if( is_post_type_archive( 'works' ) ) {
+        // 管理画面の場合
+        if( is_admin() ) {
             $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
             $template_path = $theme_file;
-        // }
+        }
 
         // works詳細の場合
         // if ( is_singular( 'works' ) ) {
         //     $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/single.php';
-
         //     $template_path = $theme_file;
         // }
-
         return $template_path;
     }
 }
