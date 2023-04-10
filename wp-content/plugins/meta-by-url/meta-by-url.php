@@ -54,7 +54,7 @@ class Meta_By_Url {
         return $template_path;
     }
 
-	function portal_get_pages() {// $pages, $pagenum = 1, $per_page = 20
+	function portal_get_pages($post_type) {// $pages, $pagenum = 1, $per_page = 20
 		$args = array(
 			'sort_order' => 'ASC',
 			'sort_column' => 'post_title',
@@ -69,16 +69,13 @@ class Meta_By_Url {
 			'exclude_tree' => '',
 			'number' => '',
 			'offset' => 0,
-			'post_type' => 'page',//|post
+			'post_type' => $post_type,//page|post
 			'post_status' => 'publish'
 		); 
 		$pages = get_pages( $args );  // get all pages based on supplied args
 		
-		$i=0;
-	
 		foreach($pages as $page){ // $pages is array of object
 			echo "ID:".$page->ID."URL:".$page->guid."post_title:".$page->post_title."post_type:".$page->post_type."<br>";
-			$i++;
 		//    $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
 		//    echo $page_template;
 		}
