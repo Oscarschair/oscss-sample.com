@@ -32,6 +32,7 @@ function add_custom_menu_page()
 add_action('admin_menu', 'add_custom_menu_page');
 
 function meta_by_url_setting(){
+	echo('hi1');
 	new Meta_By_Url();
 //    get_template_part( 'template-parts/breadcrumb' );
 }
@@ -39,11 +40,14 @@ function meta_by_url_setting(){
 class Meta_By_Url {
     function __construct() {
         // フック
+		echo('hi2');
         add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
+		echo('hi4');
     }
 
     // テンプレートの置き換え
     function template_replacement( $template_path ) {
+		echo('hi3');
         // worksアーカイブの場合
         // if( is_post_type_archive( 'works' ) ) {
             $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
