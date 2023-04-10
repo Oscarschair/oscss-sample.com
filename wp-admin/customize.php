@@ -151,7 +151,7 @@ if ( wp_use_widgets_block_editor() ) {
 $admin_title = sprintf( $wp_customize->get_document_title_template(), __( 'Loading&hellip;' ) );
 
 ?>
-<title><?php echo esc_html( $admin_title ); ?>test_12</title>
+<title><?php echo esc_html( $admin_title ); ?></title>
 
 <script type="text/javascript">
 var ajaxurl = <?php echo wp_json_encode( admin_url( 'admin-ajax.php', 'relative' ) ); ?>,
