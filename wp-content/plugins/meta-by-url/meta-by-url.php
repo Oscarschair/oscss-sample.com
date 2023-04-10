@@ -50,11 +50,6 @@ class Meta_By_Url {
             $template_path = $theme_file;
         }
 
-        // works詳細の場合
-        // if ( is_singular( 'works' ) ) {
-        //     $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/single.php';
-        //     $template_path = $theme_file;
-        // }
         return $template_path;
     }
 }
