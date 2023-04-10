@@ -13,7 +13,7 @@ do_action( 'get_header' ); ?><!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
 global $lightning_theme_options;
-//$lightning_theme_options = get_option( 'lightning_theme_options' );
+$lightning_theme_options = get_option( 'lightning_theme_options' );
 ?>
 <?php wp_head(); ?>
 </head>
