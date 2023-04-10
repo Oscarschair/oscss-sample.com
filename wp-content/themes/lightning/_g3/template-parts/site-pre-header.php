@@ -1,1 +1,0 @@
-<p>このサイトは<a href="https://oscarchair.jp">https://oscarchair.jp</a>より構築されたサンプルサイトです。</p>
