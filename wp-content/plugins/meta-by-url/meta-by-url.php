@@ -41,7 +41,8 @@ class Meta_By_Url {
     function __construct() {
         // フック
 		echo('hi2');
-        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
+		template_replacement( $template_path );
+//        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		echo('hi4');
     }
 
