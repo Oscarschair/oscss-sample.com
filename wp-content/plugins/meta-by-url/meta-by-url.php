@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 function add_custom_menu_page()
 {
     add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta-by-url-setting', 'dashicons-admin-generic', 60);
-    add_submenu_page('meta-by-url', 'タグ管理画面', 'タグ管理', 'manage_options', 'custom_submenu_page_1', 'add_custom_menu_page_1', 1);
     
 }
 add_action('admin_menu', 'add_custom_menu_page');
