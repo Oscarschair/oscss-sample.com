@@ -35,9 +35,9 @@ define( 'PLUGIN_URL', plugins_url( '/', __FILE__ ) );
 function add_plugin_js_css()
 {
 	/* JS */
-	wp_enqueue_script('my-test-script', PLUGIN_URL.'assets/main.js', array(), PLUGIN_VERSION, true );
+//	wp_enqueue_script('my-test-script', PLUGIN_URL.'assets/main.js', array(), PLUGIN_VERSION, true );
 
 	/* CSS */
-	wp_enqueue_style( 'my-test-style', PLUGIN_URL.'assets/style.css', array(), PLUGIN_VERSION );
+//	wp_enqueue_style( 'my-test-style', PLUGIN_URL.'assets/style.css', array(), PLUGIN_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'add_plugin_js_css');
