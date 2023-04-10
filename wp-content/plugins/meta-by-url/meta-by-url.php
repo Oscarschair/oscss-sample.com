@@ -51,8 +51,8 @@ class Meta_By_Url {
 		echo('hi3');
         // worksアーカイブの場合
         // if( is_post_type_archive( 'works' ) ) {
-            // $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
-            // $template_path = $theme_file;
+            $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
+            $template_path = $theme_file;
         // }
 
         // works詳細の場合
@@ -62,7 +62,7 @@ class Meta_By_Url {
         //     $template_path = $theme_file;
         // }
 
-        // return $template_path;
+        return $template_path;
     }
 }
 
