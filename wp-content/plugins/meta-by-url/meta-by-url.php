@@ -21,20 +21,6 @@ function add_custom_menu_page()
 }
 add_action('admin_menu', 'add_custom_menu_page');
 
-function meta_by_url_setting()
-{
-    echo 'asdasd';
-}
-
-
-
-
-
-
-
-
-
-
 
 /**
  * 必要な定数を定義しておく
