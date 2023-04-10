@@ -39,7 +39,30 @@ class Meta_By_Url {
     function __construct() {
 		global $wpdb;
 
+		$args = array(
+			'sort_order' => 'asc',
+			'sort_column' => 'post_title',
+			'hierarchical' => 1,
+			'exclude' => '',
+			'include' => '',
+			'meta_key' => '',
+			'meta_value' => '',
+			'authors' => '',
+			'child_of' => 0,
+			'parent' => -1,
+			'exclude_tree' => '',
+			'number' => '',
+			'offset' => 0,
+			'post_type' => 'page',
+			'post_status' => 'publish'
+		); 
+		$pages = get_pages($args); // get all pages based on supplied args
 		
+		foreach($pages as $page){ // $pages is array of object
+		   $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
+		   echo $page_template;
+		}
+
         // フック
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		include $this->template_replacement();
