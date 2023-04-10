@@ -47,7 +47,7 @@ class Meta_By_Url {
     }
 
     // テンプレートの置き換え
-    function template_replacement( $template_path ) {
+    function template_replacement( $template_path = '' ) {
 		echo('hi3');
         // worksアーカイブの場合
         // if( is_post_type_archive( 'works' ) ) {
