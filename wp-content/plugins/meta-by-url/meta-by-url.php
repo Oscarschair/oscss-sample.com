@@ -23,11 +23,7 @@ add_action('admin_menu', 'add_custom_menu_page');
 
 function meta-by-url-setting()
 {
-    ?>
-<div class="wrap">
-    <h2>タグ管理画面</h2>
-</div>
-<?php
+echo 'asdasd';
 }
 
 
