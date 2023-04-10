@@ -37,10 +37,8 @@ function meta_by_url_portal(){
 
 class Meta_By_Url {
     function __construct() {
-		//global $wpdb;
-
 		$args = array(
-			'sort_order' => 'asc',
+			'sort_order' => 'ASC',
 			'sort_column' => 'post_title',
 			'hierarchical' => 1,
 			'exclude' => '',
@@ -56,11 +54,15 @@ class Meta_By_Url {
 			'post_type' => 'page',
 			'post_status' => 'publish'
 		); 
-		$pages = get_pages($args); // get all pages based on supplied args
+		$pages = get_pages( $args );  // get all pages based on supplied args
 		
+		$i=0;
+	
 		foreach($pages as $page){ // $pages is array of object
-		   $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
-		   echo $page_template;
+			echo $i."<br>";
+			$i++;
+		//    $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
+		//    echo $page_template;
 		}
 
         // フック
