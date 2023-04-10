@@ -19,6 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function add_custom_menu_page()
 {
-    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta-by-url-setting', 'dashicons-admin-generic', 24);
+    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta-by-url-setting', 'dashicons-admin-generic', 30);
 }
 add_action('admin_menu', 'add_custom_menu_page');
