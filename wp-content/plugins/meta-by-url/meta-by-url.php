@@ -17,13 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function add_custom_menu_page()
 {
-    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta-by-url-setting', 'dashicons-admin-generic', 60);   
+    add_menu_page('Meta By URL', 'Meta By URL', 'manage_options', 'meta-by-url', 'meta_by_url_setting', 'dashicons-admin-generic', 60);   
 }
 add_action('admin_menu', 'add_custom_menu_page');
 
-function meta-by-url-setting()
+function meta_by_url_setting()
 {
-echo 'asdasd';
+    echo 'asdasd';
 }
 
 
