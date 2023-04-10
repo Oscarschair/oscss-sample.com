@@ -37,6 +37,9 @@ function meta_by_url_portal(){
 
 class Meta_By_Url {
     function __construct() {
+		global $wpdb;
+
+		
         // フック
 //        add_filter( 'template_include', array( $this, 'template_replacement' ), 10 );
 		include $this->template_replacement();
@@ -49,9 +52,23 @@ class Meta_By_Url {
             $theme_file = MY_CUSTOM_PLUGIN_DIR . '/templates/portal.php';
             $template_path = $theme_file;
         }
-
         return $template_path;
     }
+
+	// function _display_rows_hierarchical( $pages, $pagenum = 1, $per_page = 20 ) {
+	// 	global $wpdb;
+
+	// 	$level = 0;
+
+	// 	if ( ! $pages ) {
+	// 		$pages = get_pages( array( 'sort_column' => 'menu_order' ) );
+
+	// 		if ( ! $pages ) {
+	// 			return;
+	// 		}
+	// 	}
+	// }
+
 }
 
 
