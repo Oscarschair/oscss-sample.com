@@ -63,8 +63,8 @@ class Meta_By_Url {
 			global $page;
 			foreach($pages as $page){ // $pages is array of object
 				echo "ID:".$page->ID."URL:".$page->guid."post_title:".$page->post_title."post_type:".$page->post_type."<br>";
-				$page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
-				echo $page_template;
+				// $page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
+				// echo $page_template;
 			}
 		}
 
@@ -75,10 +75,10 @@ class Meta_By_Url {
 			foreach( $posts as $post ) {
 				echo "ID:".$post->ID."URL:".$post->guid."post_title:".$post->post_title."post_type:".$post->post_type."<br>";
 
-				setup_postdata( $post );
-				the_title();
+				// setup_postdata( $post );
+				// the_title();
 			}
-			wp_reset_postdata();
+			// wp_reset_postdata();
 		}
 	}
 
