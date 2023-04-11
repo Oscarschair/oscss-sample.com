@@ -34,16 +34,7 @@
 	<div class="post_password"></div><div class="page_template">default</div><div class="post_category" id="category_104">1</div><div class="tags_input" id="post_tag_104"></div><div class="sticky"></div><div class="post_format"></div></div><div class="row-actions"><span class="edit"><a href="https://oscss-sample.com/wp-admin/post.php?post=104&amp;action=edit" aria-label="“６つ目のニュース” を編集">編集</a> | </span><span class="inline hide-if-no-js"><button type="button" class="button-link editinline" aria-label="「６つ目のニュース」をインラインでクイック編集" aria-expanded="false">クイック編集</button> | </span><span class="trash"><a href="https://oscss-sample.com/wp-admin/post.php?post=104&amp;action=trash&amp;_wpnonce=adf99ea409" class="submitdelete" aria-label="「６つ目のニュース」をゴミ箱に移動">ゴミ箱へ移動</a> | </span><span class="view"><a href="https://oscss-sample.com/2023/04/10/%ef%bc%96%e3%81%a4%e7%9b%ae%e3%81%ae%e3%83%8b%e3%83%a5%e3%83%bc%e3%82%b9/" rel="bookmark" aria-label="“６つ目のニュース” を表示">表示</a></span></div><button type="button" class="toggle-row"><span class="screen-reader-text">詳細を追加表示</span></button></td><td class="author column-author" data-colname="投稿者"><a href="edit.php?post_type=post&amp;author=1">管理者-オスカー</a></td><td class="categories column-categories" data-colname="カテゴリー"><a href="edit.php?category_name=news">ニュース</a></td><td class="tags column-tags" data-colname="タグ"><span aria-hidden="true">—</span><span class="screen-reader-text">タグなし</span></td><td class="comments column-comments" data-colname="コメント">		<div class="post-com-count-wrapper">
 		<span aria-hidden="true">—</span><span class="screen-reader-text">コメントはありません</span><span class="post-com-count post-com-count-pending post-com-count-no-pending"><span class="comment-count comment-count-no-pending" aria-hidden="true">0</span><span class="screen-reader-text">コメントはありません</span></span>		</div>
 		</td><td class="date column-date" data-colname="日付">最終更新日<br>2023年4月10日 11:38 AM</td>		</tr>
-				<tr id="post-102" class="iedit author-self level-0 post-102 type-post status-publish format-standard hentry category-news">
-			<th scope="row" class="check-column">			<label class="screen-reader-text" for="cb-select-102">
-				５つ目のニュースを選択			</label>
-			<input id="cb-select-102" type="checkbox" name="post[]" value="102">
-			<div class="locked-indicator">
-				<span class="locked-indicator-icon" aria-hidden="true"></span>
-				<span class="screen-reader-text">
-				“５つ目のニュース” はロックされています				</span>
-			</div>
-			</th>
+	
 
 			</tbody>
 
