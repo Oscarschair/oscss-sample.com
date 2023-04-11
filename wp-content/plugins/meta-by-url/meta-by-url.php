@@ -54,10 +54,21 @@ class Meta_By_Url {
         return $template_path;
     }
 
-	function portal_get_pages($post_type = 'page') {
+	function portal_get_pages() {
 		$args = array(
 			// 取得したい投稿の条件
 		);
+
+		
+		echo("<br>Get all page<br>");
+		$pages = get_pages( $args );  // get all pages based on supplied args
+		foreach($pages as $page){ // $pages is array of object
+			echo "ID:".$page->ID."URL:".$page->guid."post_title:".$page->post_title."post_type:".$page->post_type."<br>";
+			$page_template = get_post_meta($page->ID, '_wp_page_template', true); // Page template stored in "_wp_page_template"
+			echo $page_template;
+		}
+
+		echo("<br>Get all post<br>");
 		$my_posts = get_posts( $args );
 		if ( $my_posts ) {
 				global $post;
@@ -67,11 +78,7 @@ class Meta_By_Url {
 			}
 			wp_reset_postdata();
 
-			echo("<br>I am here<br>");
 		}
-		// echo("ID");
-		// echo($ID);
-
 	}
 
 
