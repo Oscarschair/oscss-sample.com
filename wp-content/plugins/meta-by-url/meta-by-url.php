@@ -55,16 +55,22 @@ class Meta_By_Url {
     }
 
 	function portal_get_pages($post_type = 'page') {
-		$post_data = get_post();
-		$ID        = $post_data->ID;                // ページID
-		$title     = $post_data->post_title;        // タイトル
-		$date      = $post_data->post_date;         // 投稿日時
-		$content   = $post_data->post_content;      // コンテンツ内容
-		$slug      = $post_data->post_name;         // スラッグ
-		$parent    = $post_data->post_parent;       // 親のID
-		$url       = $post_data->guid;              // ページURL
-		echo("ID");
-		echo($ID);
+		$args = array(
+			// 取得したい投稿の条件
+		);
+		$my_posts = get_posts( $args );
+		if ( $my_posts ) {
+				global $post;
+			foreach( $my_posts as $post ) {
+				setup_postdata( $post );
+				the_title();
+			}
+			wp_reset_postdata();
+
+			echo("<br>I am here<br>");
+		}
+		// echo("ID");
+		// echo($ID);
 
 	}
 
