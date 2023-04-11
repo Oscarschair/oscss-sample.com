@@ -56,8 +56,9 @@ class Meta_By_Url {
 
 	function portal_get_pages() {
 		$args = array();
+
 		echo("<br>Get all pages:<br>");
-		$pages = get_pages( $args );  // get all pages based on supplied args
+		$pages = get_pages( $args );
 		if ( $pages ) {
 			global $page;
 			foreach($pages as $page){ // $pages is array of object
@@ -72,6 +73,7 @@ class Meta_By_Url {
 		if ( $posts ) {
 			global $post;
 			foreach( $posts as $post ) {
+				echo "ID:".$post->ID."URL:".$post->guid."post_title:".$post->post_title."post_type:".$post->post_type."<br>";
 
 				setup_postdata( $post );
 				the_title();
