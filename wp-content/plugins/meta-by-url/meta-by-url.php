@@ -63,7 +63,7 @@ class Meta_By_Url {
 		$slug      = $post_data->post_name;         // スラッグ
 		$parent    = $post_data->post_parent;       // 親のID
 		$url       = $post_data->guid;              // ページURL
-
+		echo("ID");
 		echo($ID);
 
 	}
